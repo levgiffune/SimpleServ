@@ -35,7 +35,7 @@
     margin-right: auto;
 }
 
-.modbar a{
+#newbar a{
     display: block;
     height: 100%;
     width: 5%;
@@ -94,4 +94,13 @@ div{
 
 #commandbox{
     margin-top: 1%;
+}
+
+#backupbody .modbar img{
+    width: 100%;
+    height: 35%;
+}
+
+.conf #label2{
+    width: 15%;
 }
