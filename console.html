@@ -1,0 +1,42 @@
+<head>
+    <title>SimpleServ|Console</title>
+    <link href="https://fonts.cdnfonts.com/css/cascadia-code" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"/>
+    <script type="text/javascript">
+        var first = true;
+        
+        function handler(){
+            first = false;
+
+            if(document.getElementById("command").value != ""){
+                document.getElementById("display").innerHTML += 
+                document.getElementById("command").value+"<div/>OUTPUT</div>";
+            }
+
+            document.getElementById("command").value = "";
+            if(!first){
+                document.getElementById("display").innerHTML += "Game Name> ";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="menubar">
+        <a href="index.html">Dashboard|</a>
+        <a href="mods.html">Mods|</a>
+        <a href="console.html">Console (Advaced)</a>
+    </div>
+    <div class="console">
+        <div id="display">Game Name> 
+            <div>log data etc...</div>
+            <div>log data etc...</div>
+            <div>log data etc...</div>
+            <div>log data etc...</div>
+            Game Name> 
+        </div>
+        <form onsubmit="handler(); return false;" id="commandbox" autocomplete="off">
+            <input id="command" type="text" placeholder="Type Command"/>
+            <input type="submit" value="" id="submit"/> 
+        </form>
+    </div>
+</body>
